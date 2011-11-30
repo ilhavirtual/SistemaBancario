@@ -1,14 +1,38 @@
 
 public class ContaCorrente {
 
-	String nomeDoCliente;
+	Cliente cliente;
 	String numeroDaAgencia;
 	String numeroDaConta;
 	double saldo;
 	
 	public void sacar(double valor) {
-		System.out.println("Sacando: " + valor + " do cliente: " 
-						+ nomeDoCliente);
 		saldo = saldo - valor;
 	}
+	
+	public void depositar(double valor) {
+		saldo = saldo + valor;
+	}
+	
+	public void transferirPara(ContaCorrente outraConta, 
+			double valor) {
+		sacar(valor);
+		outraConta.depositar(valor);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
