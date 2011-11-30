@@ -4,7 +4,7 @@ public class ContaCorrente {
 	Cliente cliente = new Cliente();
 	String numeroDaAgencia;
 	String numeroDaConta;
-	double saldo;
+	private double saldo = 1000.0;
 	double limite = 100.0;
 	boolean premiada = true;
 	
@@ -27,7 +27,9 @@ public class ContaCorrente {
 		outraConta.depositar(valor);
 	}
 	
-	
+	public double getSaldo() {
+		return saldo;
+	}
 	
 	
 	
